@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    background-color: rgb(147, 147, 147);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 450px;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: aliceblue;
+    position: relative;
+    transition: all 500ms;
+    overflow: hidden;
+    box-shadow: 0px 11.9px 131.8px -100px rgba(0, 0, 0, 0.008), 0px 14px 172.3px -100px rgba(0, 0, 0, 0.016), 0px 16.4px 195.3px -100px rgba(0, 0, 0, 0.024), 0px 19.2px 217.3px -100px rgba(0, 0, 0, 0.032), 0px 22.5px 254.1px -100px rgba(0, 0, 0, 0.04), 0px 26px 383px -100px rgba(0, 0, 0, 0.07);
+}
+
+.titre {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(46, 73, 73, 0.507);
+}
+
+.titre h1 {
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.product {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    border-bottom: .2px solid rgba(46, 73, 73, 0.507);
+    transition: all 500ms;
+}
+
+.product.deleted {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.product button {
+    width: 30px;
+    padding: 6px;
+    position: absolute;
+    right: 1%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 600ms;
+    border-radius: 20px;
+}
+
+.product button:hover {
+    background-color: rgba(0, 0, 0, 0.137);
+}
+
+.mssg {
+    position: absolute;
+    width: 180px;
+    height: 30px;
+    background-color: red;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    top: 90%;
+    margin: auto;
+    display: none;
+    animation: up 300ms;
+    text-transform: capitalize;
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateY(-9%);
+    }
+}
+
+.rerun button {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(33, 33, 139);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
